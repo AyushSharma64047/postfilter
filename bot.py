@@ -1,18 +1,18 @@
 import asyncio
 import contextlib
-from telethon import TelegramClient, events, Button
-from telethon.tl.functions.messages import (
+from pyrogram import TelegramClient, events, Button
+from pyrogram.tl.functions.messages import (
     ExportChatInviteRequest,
     ImportChatInviteRequest,
 )
-from telethon.errors.rpcerrorlist import (
+from pyrogram.errors.rpcerrorlist import (
     UserAlreadyParticipantError,
     UserNotParticipantError,
     FloodWaitError,
 )
-from telethon.tl.functions.channels import GetParticipantRequest
-from telethon.tl.types import PeerChannel
-from telethon.sessions import StringSession
+from pyrogram.tl.functions.channels import GetParticipantRequest
+from pyrogram.tl.types import PeerChannel
+from pyrogram.sessions import StringSession
 from database import *
 from config import Config
 import traceback
