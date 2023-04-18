@@ -22,10 +22,10 @@ from utils import grt, valid_args
 api_id = Config.API_ID
 api_hash = Config.API_HASH
 bot_token = Config.BOT_TOKEN
-bot = TelegramClient("filterbot", api_id, api_hash).start(bot_token=bot_token)
+bot = TelegramClient("Auto_Post_Filter_Bot", api_id, api_hash).start(bot_token=bot_token)
 session = Config.STRINGSESSION
 client = TelegramClient(StringSession(session), api_id=api_id, api_hash=api_hash)
-SUBSCRIPTION_TIME = Config.SUBSCRIPTION_TIME * 86400
+SUBSCRIPTION_TIME = Config.SUBSCRIPTION_TIME * 360
 
 print(
     """
