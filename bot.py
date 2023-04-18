@@ -364,7 +364,7 @@ async def enable(event):
         )
     try:
         user = int(user)
-    except Value Error:
+    except Exception:
         user = user.replace("@","")
     try:
         user = await bot.get_entity(user)
@@ -378,11 +378,11 @@ async def enable(event):
     if not valid:
         await bot.send_message(
             Config.OWNER_ID,
-            f"{event.sender.first_name}'s subscription of 31 days has been expired!",
+            f"{event.sender.first_name}'s subscription of 360 days has been expired!",
         )
         await bot.send_message(
             event.sender_id,
-            f"Dear user,\nYour subscription of 31 days has been expired!\nPlease buy a new one!",
+            f"Dear user,\nYour subscription of 360 days has been expired!\nPlease buy a new one!",
             buttons=Button.url("Buy Subscription", f"https://t.me/{Config.OWNER_USERNAME}"),
         )
         return await event.reply("This user's Subscription has ended!")
