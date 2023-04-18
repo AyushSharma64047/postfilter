@@ -364,13 +364,13 @@ async def enable(event):
         )
     try:
         user = int(user)
-    except Exception:
-        user = user.replace("@", "")
+    except Value Error:
+        user = user.replace("@","")
     try:
         user = await bot.get_entity(user)
     except Exception:
         return await event.reply("This user has not started me in PM!")
-    if not (isauth := is_authenticated(userid)):
+    if not (isauth :=is_authenticated(user.id)):
         return await event.reply("This user is not authorised!\nPlease /auth first!")
     dt = datetime.now()
     time = dt.timestamp()
