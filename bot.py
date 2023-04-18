@@ -370,7 +370,7 @@ async def enable(event):
         user = await bot.get_entity(user)
     except Exception:
         return await event.reply("This user has not started me in PM!")
-    if not (isauth :=is_authenticated(user.id)"1413071149"):
+    if not (isauth :=is_authenticated(user.id)""):
         return await event.reply("This user is not authorised!\nPlease /auth first!")
     dt = datetime.now()
     time = dt.timestamp()
