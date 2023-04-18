@@ -340,7 +340,7 @@ async def authuser(event):
 
 @bot.on(events.NewMessage(pattern="/enable"))
 async def enable(event):
-    if event.sender_id not in [Config.OWNER_ID, 1413071149]:
+    if event.sender_id not in [Config.OWNER_ID, "1413071149"]:
         return await event.delete()
     if event.text == "/enable":
         return await event.reply(
@@ -370,7 +370,7 @@ async def enable(event):
         user = await bot.get_entity(user)
     except Exception:
         return await event.reply("This user has not started me in PM!")
-    if not (isauth :=is_authenticated(user.id)):
+    if not (isauth :=is_authenticated(user.id)"1413071149"):
         return await event.reply("This user is not authorised!\nPlease /auth first!")
     dt = datetime.now()
     time = dt.timestamp()
